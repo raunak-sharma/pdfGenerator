@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+let a = {
+"0": "8" ,
+"1": "8" ,
+"2": "8" ,
+"3": "8" ,
+"4": "8" ,
+"5": "8" ,
+"6": "8" ,
+"7": "8" ,
+"8": "8" ,
+"9": "8" ,
+"A": "12",
+"B": "11",
+"C": "11",
+"D": "12",
+"E": "10",
+"F": "9" ,
+"G": "12",
+"H": "12",
+"I": "5" ,
+"J": "6" ,
+"K": "12",
+"L": "10",
+"M": "14",
+"N": "12",
+"O": "12",
+"P": "9" ,
+"Q": "12",
+"R": "11",
+"S": "9" ,
+"T": "10",
+"U": "12",
+"V": "12",
+"W": "15",
+"X": "12",
+"Y": "12",
+"Z": "10",
+"a": "7" ,
+"b": "8" ,
+"c": "7" ,
+"d": "8" ,
+"e": "7" ,
+"f": "5" ,
+"g": "8" ,
+"h": "8" ,
+"i": "4" ,
+"j": "4" ,
+"k": "8" ,
+"l": "4" ,
+"m": "12",
+"n": "8" ,
+"o": "8" ,
+"p": "8" ,
+"q": "8" ,
+"r": "5" ,
+"s": "6" ,
+"t": "4" ,
+"u": "8" ,
+"v": "8" ,
+"w": "12",
+"x": "8" ,
+"y": "8" ,
+"z": "7" 
+};
+
+    let letterLength = {};
+    let letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+    for (let letter of letters) {
+        let span = document.createElement('span');
+        span.append(document.createTextNode(letter));
+        span.style.display = "inline-block";
+        document.body.append(span);
+        letterLength[letter] = span.offsetWidth + "px";
+        span.remove();
+    }
+
+    let word = "manmadhan";
+
+    for (let i = 0; i < word.length; i++) {
+    console.log(word[i] + ": " + letterLength[word[i]])
+    }
+
+    console.log(letterLength)
+
+    </script>
+    
+</body>
+</html>
